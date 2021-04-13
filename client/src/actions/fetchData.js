@@ -6,7 +6,7 @@ export function fetchData() {
     dispatch(dataRequest());
 
     axios
-      .get(`http://localhost:5000/phones`)
+      .get(`https://soamee-phone-catalog.herokuapp.com/phones`)
       .then((response) => {
         setTimeout(() => dispatch(dataSuccess(response.data.data)), 35 * 60);
       })
